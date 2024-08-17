@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
@@ -6,17 +7,20 @@ import PublishedWithChangesIcon from "@mui/icons-material/PublishedWithChanges";
 
 const PetAbout = () => {
   return (
-    <Box py={8}>
+    <Box py={12}>
       <Container>
         <Stack>
-          <Grid container spacing={5}>
+          <Typography variant="h4" gutterBottom color="#ff6347">
+            Dedicated to Your Pet's Well-Being
+          </Typography>
+          <Grid container spacing={5} pt={4}>
             <Grid item xs={12} sm={12} md={6}>
-              <Box
+              {/* <Box
                 sx={{
                   height: "300px",
                   "&& img": { height: "100%" },
                   display: "flex",
-                  justifyContent: "center",
+                  borderRadius: "10px",
                 }}
               >
                 <Image
@@ -28,18 +32,25 @@ const PetAbout = () => {
                   width={400}
                   objectFit="cover"
                 />
+              </Box> */}
+              <Box display="flex" justifyContent="center">
+                <video
+                  src={"/Banner/pet.mp4"}
+                  autoPlay
+                  loop
+                  muted
+                  style={{ width: "100%", height: "100%" }}
+                />
               </Box>
             </Grid>
             <Grid item xs={12} sm={12} md={6}>
-              <Typography variant="h4" gutterBottom color="#FE922D">
-                The Best for Your Pet!
-              </Typography>
-              <Typography paragraph>
-                We understand that your pet deserves the very best care and
-                attention. Our services are designed to ensure your pet is
-                happiness, health, and well-being. From grooming and veterinary
-                care to fun activities and training, we provide everything your
-                pet needs.
+              <Typography paragraph sx={{ textAlign: "justify" }}>
+                We understand the profound bond between you and your pet. That's
+                why we're dedicated to providing exceptional care, ensuring your
+                furry friend's happiness, health, and well-being. From expert
+                grooming and reliable veterinary support to engaging activities
+                and training, we offer a comprehensive range of services to meet
+                all your pet's needs.
               </Typography>
               <Box mt={2}>
                 <Typography

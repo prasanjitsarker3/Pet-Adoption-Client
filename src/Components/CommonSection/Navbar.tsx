@@ -2,23 +2,18 @@
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import { Stack } from "@mui/material";
+import { Container } from "@mui/material";
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { getUserInfo } from "../Auth/authService";
+import { useRouter } from "next/navigation";
 
 const AuthButton = dynamic(() => import("../CommonSection/AuthButton"), {
   ssr: false,
@@ -34,6 +29,8 @@ const navItem = [
 
 const Navbar = () => {
   const [userRole, setUserRole] = React.useState("");
+  const [scrolling, setScrolling] = React.useState(false);
+
   React.useEffect(() => {
     const userInfo = getUserInfo();
     if (userInfo && userInfo.role) {
@@ -45,6 +42,22 @@ const Navbar = () => {
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
@@ -122,14 +135,14 @@ const Navbar = () => {
   );
 
   return (
-    <div>
-      <Box pb={8} sx={{ display: "flex" }}>
-        {/* <CssBaseline /> */}
+    <Container>
+      <Box sx={{ display: "flex" }}>
         <AppBar
           component="nav"
           sx={{
-            background: "#F4F7FE",
-            boxShadow: 0,
+            background: scrolling ? "white" : "none",
+            boxShadow: "none",
+            px: "65px",
           }}
         >
           <Toolbar>
@@ -236,6 +249,7 @@ const Navbar = () => {
             </Box>
           </Toolbar>
         </AppBar>
+        {/* </Container> */}
         <nav>
           <Drawer
             // container={container}
@@ -257,7 +271,7 @@ const Navbar = () => {
           </Drawer>
         </nav>
       </Box>
-    </div>
+    </Container>
   );
 };
 

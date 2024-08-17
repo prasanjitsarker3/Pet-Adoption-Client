@@ -102,7 +102,7 @@ const PetDetailsPage = (params: any) => {
   }
 
   const commonStyle = {
-    backgroundColor: "#F4F7FE",
+    backgroundColor: "#ffefed",
     padding: 1,
     mb: "8px",
   };
@@ -185,7 +185,17 @@ const PetDetailsPage = (params: any) => {
           </Stack>
         )}
         <Box textAlign="center">
-          <Button onClick={handleClickOpen} variant="contained">
+          <Button
+            onClick={handleClickOpen}
+            variant="contained"
+            sx={{
+              backgroundColor: "#ff6347",
+              ":hover": {
+                backgroundColor: "#ff6347",
+                color: "white",
+              },
+            }}
+          >
             Request for Pet Adoption
           </Button>
         </Box>
@@ -242,6 +252,13 @@ const PetDetailsPage = (params: any) => {
               <Button
                 fullWidth={true}
                 variant="contained"
+                sx={{
+                  backgroundColor: "#ff6347",
+                  ":hover": {
+                    backgroundColor: "#ff6347",
+                    color: "white",
+                  },
+                }}
                 disabled={!agreementToTerms || requesting}
                 autoFocus
                 type="submit"

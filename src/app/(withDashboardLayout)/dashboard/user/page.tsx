@@ -172,7 +172,38 @@ const UserDashboard = () => {
                 </Box>
               </Box>
             </Grid>
-            <Grid item xs={12} sm={12} md={6}></Grid>
+            <Grid item xs={12} sm={12} md={6}>
+              <Box display="flex" gap={6}>
+                <Box
+                  bgcolor="#ff6347"
+                  py={7}
+                  px={4}
+                  color="white"
+                  textAlign="center"
+                >
+                  <Typography variant="h4" component="h2">
+                    0
+                  </Typography>
+                  <Typography variant="h5" component="h2">
+                    Total Adoption
+                  </Typography>
+                </Box>
+                <Box
+                  bgcolor="#ff6347"
+                  py={7}
+                  px={4}
+                  color="white"
+                  textAlign="center"
+                >
+                  <Typography variant="h4" component="h2">
+                    0
+                  </Typography>
+                  <Typography variant="h5" component="h2">
+                    Adoption Pending
+                  </Typography>
+                </Box>
+              </Box>
+            </Grid>
           </Grid>
         )}
 

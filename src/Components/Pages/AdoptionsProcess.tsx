@@ -7,7 +7,7 @@ const AdoptionsProcess = () => {
     borderRadius: "8px",
   };
   return (
-    <Box py={8} bgcolor="#f9f9f9">
+    <Box py={8} bgcolor="">
       <Container>
         <Typography variant="h4" gutterBottom color="#FE772A">
           How We Work

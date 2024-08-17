@@ -32,8 +32,8 @@ const loginValidationSchema = z.object({
 });
 
 const defaultValue = {
-  email: "",
-  password: "",
+  email: "admin123@gmail.com",
+  password: "admin123",
 };
 
 const LoginPage = () => {
@@ -69,14 +69,30 @@ const LoginPage = () => {
         backgroundPosition: "center",
       }}
     >
-      <Box py={5} px={12} boxShadow={1} bgcolor="white" borderRadius={1}>
+      <Box
+        py={5}
+        px={12}
+        // boxShadow={1}
+        borderRadius={1}
+        sx={{
+          background: "rgba(255, 255, 255, 0.1)", // Semi-transparent background
+          backdropFilter: "blur(12px)", // Blur effect
+          border: "1px solid rgba(255, 255, 255, 0.2)", // Optional: a border to enhance the glass effect
+        }}
+      >
         <FromProvider
           onSubmit={handleSubmitLogin}
           resolver={zodResolver(loginValidationSchema)}
           defaultValues={defaultValue}
         >
           <Stack>
-            <Typography textAlign="center" variant="h6" component="h4" pb={2}>
+            <Typography
+              textAlign="center"
+              color="white"
+              variant="h6"
+              component="h4"
+              pb={2}
+            >
               Please Login !
             </Typography>
             <Grid gap={2}>
@@ -98,21 +114,23 @@ const LoginPage = () => {
                 />
               </Grid>
             </Grid>
-            {/* <Typography component="p" pt={1}>
-              Forget Password
-            </Typography> */}
             <Button
               variant="contained"
               type="submit"
               fullWidth={true}
               sx={{
                 marginTop: 2,
+                backgroundColor: "#ff6347",
+                color: "white",
+                ":hover": {
+                  backgroundColor: "#FE772A",
+                },
               }}
             >
               Login
             </Button>
 
-            <Typography component="p" pt={1}>
+            <Typography component="p" color="white" pt={1}>
               Don;t have an account?{" "}
               <span style={{ color: "blue" }}>
                 <Link href="/register">Create an account</Link>

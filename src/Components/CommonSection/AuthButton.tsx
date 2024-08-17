@@ -26,7 +26,7 @@ const AuthButton = () => {
   const handleLogOut = () => {
     logoutUser(router);
     // removeUser();
-    // router.refresh();
+    router.refresh();
   };
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);

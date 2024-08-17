@@ -79,6 +79,7 @@ const PetHomePage = () => {
             width="100%"
             direction={{ xs: "column", sm: "column", md: "row" }}
             spacing={3}
+            pt={6}
           >
             <Box
               sx={{
@@ -255,7 +256,7 @@ const PetHomePage = () => {
                         <Typography variant="body2" color="text.secondary">
                           {pet?.description}
                         </Typography>
-                        <Typography variant="body2">
+                        {/* <Typography variant="body2">
                           Breed: {pet?.breed}
                         </Typography>
                         <Typography
@@ -265,7 +266,7 @@ const PetHomePage = () => {
                         >
                           <LocationOnIcon />
                           {pet?.location}
-                        </Typography>
+                        </Typography> */}
                       </CardContent>
                       <CardActions
                         sx={{
@@ -284,6 +285,13 @@ const PetHomePage = () => {
                             fullWidth={true}
                             sx={{
                               width: "100%",
+                              color: "#ff6347",
+                              border: "1px solid #ff6347",
+                              ":hover": {
+                                backgroundColor: "#ff6347",
+                                border: "1px solid #ff6347",
+                                color: "white",
+                              },
                             }}
                           >
                             See Details

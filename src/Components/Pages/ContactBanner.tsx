@@ -16,16 +16,16 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 const ContactBanner = () => {
   return (
-    <Box bgcolor="#f9f9f9">
+    <Box>
       <Container>
-        <Box py={5}>
-          <Grid container>
-            <Grid item xs={12} sm={12} md={6} bgcolor="white" p={5}>
+        <Box pt={6} pb={12}>
+          <Grid container spacing={12}>
+            <Grid item xs={12} sm={12} md={6}>
               <Box>
-                <Typography variant="h4" gutterBottom>
-                  Send us a Message
+                <Typography variant="h4" gutterBottom color="#ff7359">
+                  Send Us a Message
                 </Typography>
-                <Divider />
+                {/* <Divider /> */}
                 <Typography variant="body1" paragraph>
                   There are many variations of passages of Lorem Ipsum
                   available, but the majority have suffered alteration in some
@@ -40,7 +40,7 @@ const ContactBanner = () => {
                       justifyContent: "center",
                       width: 50,
                       height: 50,
-                      bgcolor: "#FE772A",
+                      bgcolor: "#ff6347",
                       borderRadius: "50%",
                     }}
                   >
@@ -63,7 +63,7 @@ const ContactBanner = () => {
                       justifyContent: "center",
                       width: 50,
                       height: 50,
-                      bgcolor: "#FE772A",
+                      bgcolor: "#ff6347",
                       borderRadius: "50%",
                     }}
                   >
@@ -86,7 +86,7 @@ const ContactBanner = () => {
                       justifyContent: "center",
                       width: 50,
                       height: 50,
-                      bgcolor: "#FE772A",
+                      bgcolor: "#ff6347",
                       borderRadius: "50%",
                     }}
                   >
@@ -103,7 +103,7 @@ const ContactBanner = () => {
                 </Stack>
               </Box>
             </Grid>
-            <Grid item xs={12} sm={12} md={6} bgcolor="#F1F1F1" p={5}>
+            <Grid item xs={12} sm={12} md={6}>
               <Box
                 component="form"
                 noValidate
@@ -130,9 +130,9 @@ const ContactBanner = () => {
                   variant="contained"
                   sx={{
                     mt: 2,
-                    backgroundColor: "#FE772A",
+                    backgroundColor: "#ff6347",
                     ":hover": {
-                      backgroundColor: "#FE772A",
+                      backgroundColor: "#ff6347",
                     },
                   }}
                 >

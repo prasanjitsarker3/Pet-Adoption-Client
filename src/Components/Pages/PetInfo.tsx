@@ -43,7 +43,7 @@ const PetInfo = () => {
   }, [searchTerm]);
 
   const [page, setPage] = useState(1);
-  const [limit] = useState(6); // Fixed limit to 6 items per page
+  const [limit] = useState(3); // Fixed limit to 6 items per page
 
   const query: Record<string, any> = {
     searchTerm,
@@ -162,7 +162,7 @@ const PetInfo = () => {
               </FormControl>
 
               {/* Recent Adoption Pet */}
-              <Box
+              {/* <Box
                 sx={{
                   display: {
                     xs: "none", // Hide on small devices
@@ -171,7 +171,7 @@ const PetInfo = () => {
                 }}
               >
                 <RecentAdoption />
-              </Box>
+              </Box> */}
             </Box>
             <Box
               sx={{
@@ -287,6 +287,13 @@ const PetInfo = () => {
                             endIcon={<KeyboardArrowRightIcon />}
                             sx={{
                               width: "100%",
+                              color: "#ff6347",
+                              border: "1px solid #ff6347",
+                              ":hover": {
+                                backgroundColor: "#ff6347",
+                                border: "1px solid #ff6347",
+                                color: "white",
+                              },
                             }}
                           >
                             See Details

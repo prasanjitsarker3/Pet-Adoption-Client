@@ -14,25 +14,7 @@ const Footer = () => {
       <Stack>
         <Grid container spacing={5}>
           <Grid item xs={12} sm={12} md={3}>
-            <Stack
-              direction="row"
-              alignItems="center"
-              justifyContent="center"
-              spacing={3}
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: 60,
-                  height: 60,
-                  bgcolor: "#FE772A",
-                  borderRadius: "50%",
-                }}
-              >
-                <LocationOnIcon style={{ color: "white", fontSize: 30 }} />
-              </Box>
+            <Stack direction="row" alignItems="center" justifyContent="center">
               <Box>
                 <Typography variant="h6" color="white">
                   516 Columbia Blvd
@@ -44,25 +26,7 @@ const Footer = () => {
             </Stack>
           </Grid>
           <Grid item xs={12} sm={12} md={3}>
-            <Stack
-              direction="row"
-              alignItems="center"
-              justifyContent="center"
-              spacing={3}
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: 60,
-                  height: 60,
-                  bgcolor: "#FE772A",
-                  borderRadius: "50%",
-                }}
-              >
-                <PhoneIcon style={{ color: "white", fontSize: 30 }} />
-              </Box>
+            <Stack direction="row" alignItems="center" justifyContent="center">
               <Box>
                 <Typography variant="h6" color="white">
                   Office: 772-619-6309
@@ -74,25 +38,7 @@ const Footer = () => {
             </Stack>
           </Grid>
           <Grid item xs={12} sm={12} md={3}>
-            <Stack
-              direction="row"
-              alignItems="center"
-              justifyContent="center"
-              spacing={3}
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: 60,
-                  height: 60,
-                  bgcolor: "#FE772A",
-                  borderRadius: "50%",
-                }}
-              >
-                <UpdateIcon style={{ color: "white", fontSize: 30 }} />
-              </Box>
+            <Stack direction="row" alignItems="center" justifyContent="center">
               <Box>
                 <Typography variant="h6" color="white">
                   Mon - Fri: 9am - 8pm
