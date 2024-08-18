@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-import banner from "../../../../public/Banner/p1-removebg-preview.png";
+import banner from "../../../../public/Banner/pt2.png";
 
 const BannerNew = () => {
   return (
@@ -20,7 +20,7 @@ const BannerNew = () => {
       {/* Background Shape */}
       <Box
         sx={{
-          background: "linear-gradient(135deg, #ffefed 0%, #ffefed 100%)",
+          background: "linear-gradient(135deg, #ff6347 0%, #ffefed 100%)",
           height: "100%",
           width: "100%",
           clipPath: "polygon(63% 0, 100% 0%, 100% 100%, 67% 100%, 51% 46%)",
